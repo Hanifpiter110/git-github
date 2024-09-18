@@ -3,9 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hanif-PPLG-RPL2</title>
+    <title>ganti warna latar belakang</title>
+    <style>
+        body {
+            font-family: arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style> 
 </head>
 <body>
     
+    <h1>Klik Tombol Mengganti Warna Latar</h1>
+
+    <button id="colorbutton">Ganti Warna</button>
+
+    <script>
+        document.querySelector('#colorbutton').addEventListener('click', function() {
+            const colors = ['#FF5733', '#33FF57', '#3357FF', '#F333FF'];
+            const randomcolor = colors[Math.floor(Math.random() * colors.length)];
+            document.querySelector('body').style.backgroundColor = randomcolor;
+         });
+    </script>
 </body>
+
 </html>
